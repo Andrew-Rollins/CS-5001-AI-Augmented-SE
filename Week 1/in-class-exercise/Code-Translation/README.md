@@ -20,7 +20,7 @@ python code_translation.py --user-prompt-file prompts/user-prompt.txt --system-p
 ```
 
 # How to Run Test:
-Go to `code_translation` folder. Then run:
+Go to `output_code_translation` folder. Then run:
 ```
 python -m unittest discover -s test -v
 ```
@@ -62,7 +62,7 @@ python code_translation.py --user-prompt-file prompts/user-prompt.txt --system-p
 
 Step 5: run tests:
 
-Go to `code_translation` folder. Then run:
+Go to `output_code_translation` folder. Then run:
 ```
 python -m unittest discover -s test -v
 ```
