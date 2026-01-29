@@ -37,7 +37,7 @@ def main() -> int:
     args = ap.parse_args()
 
     in_dir = Path("cpp_programs").resolve()
-    out_dir = Path("output_code_translation/python").resolve()
+    out_dir = Path("output_code_translation/solution").resolve()
 
     if not in_dir.exists() or not in_dir.is_dir():
         raise SystemExit(f"Input folder not found: {in_dir}")

@@ -8,7 +8,7 @@ Contains 18 CPP programs
 
 ## output_code_translation
 Inclues two folders:
-### Python: Saves your output in this folder.
+### Solution: Saves your output in this folder. Please do not change this folder name as Tests depends on the exact name.
 ### Test: The test files for the python codes.
 
 ## code_translation.py
@@ -31,3 +31,11 @@ python -m unittest discover -s test -v
 - Go through the tests as well and understand how the tests are setup.
 
 - change only the prompts file and nothing else.
+
+# Required packages
+
+```
+langchain
+langchain-ollama
+ollama
+```
