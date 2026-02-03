@@ -8,7 +8,7 @@
 #
 # Usage:
 #   python rag.py build --data_dir ./data_code_translation_log --index_dir ./rag_index
-#   python rag.py ask --index_dir ./rag_index --model llama3.1 --top_k 5
+#   python rag.py ask --index_dir ./rag_index --model ministral-3:3b-cloud--top_k 5
 #
 # Put .txt/.md files in ./data before building.
 
