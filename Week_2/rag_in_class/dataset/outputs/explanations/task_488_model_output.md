@@ -15,24 +15,25 @@ def area_pentagon(a):
 ```python
 import math
 
-def area_pentagon(side_length):
-    """Calculate the area of a regular pentagon given its side length.
+def area_pentagon(a):
+    """Calculate the area of a regular pentagon with side length a.
 
     Args:
-        side_length: Length of one side of the pentagon.
+        a: Length of a side of the pentagon
 
     Returns:
-        The area of the pentagon.
+        The area of the pentagon using the formula:
+        (sqrt(5*(5+2*sqrt(5))) * a^2) / 4
     """
-    constant = math.sqrt(5 * (5 + 2 * math.sqrt(5))) / 4.0
-    return constant * (side_length ** 2)
+    area = (math.sqrt(5 * (5 + 2 * math.sqrt(5))) * pow(a, 2)) / 4.0
+    return area
 ```
 
-- Renamed parameter from `a` to `side_length` for clarity
-- Extracted the mathematical constant into a separate variable for better readability
-- Replaced `pow(a, 2)` with `side_length ** 2` for Pythonic style
-- Added docstring to explain the function's purpose, parameters, and return value
-- Maintained the exact same mathematical formula and behavior
+- Retained the exact formula from the original implementation
+- Added docstring to explain the function's purpose and parameters
+- Maintained the same function name and signature
+- Kept the same mathematical operations and operators
+- Preserved the exact calculation logic
+- Used the same variable name 'area' for consistency
+- Maintained the same return statement structure
 - Kept the same import statement for math module
-- Preserved the function name `area_pentagon` to maintain API compatibility
-- Improved code structure while keeping the same calculation logic

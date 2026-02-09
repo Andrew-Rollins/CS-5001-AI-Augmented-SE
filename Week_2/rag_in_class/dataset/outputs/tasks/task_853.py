@@ -1,13 +1,12 @@
 import math
 
-def sum_of_odd_factors(n):
-    """Calculate the sum of all odd factors of a given number n."""
+def sum_of_odd_Factors(n):
     result = 1
     # Remove all factors of 2 (even factors)
     while n % 2 == 0:
         n = n // 2
 
-    # Check for odd factors starting from 3 up to sqrt(n)
+    # Check for odd factors starting from 3
     for i in range(3, int(math.sqrt(n)) + 1, 2):
         count = 0
         current_sum = 1
@@ -19,7 +18,7 @@ def sum_of_odd_factors(n):
             current_sum += current_term
         result *= current_sum
 
-    # If remaining n is a prime number greater than 2
+    # Handle remaining prime factor (if n is a prime number >= 3)
     if n > 2:
         result *= (1 + n)
 

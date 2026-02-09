@@ -18,21 +18,12 @@ def even_bit_toggle_number(n) :
 
 ```python
 def even_bit_toggle_number(n):
-    """Toggle all even-indexed bits (0-based) in the binary representation of n.
-
-    Args:
-        n: Integer to process
-
-    Returns:
-        Integer with even-indexed bits toggled
-    """
     result = 0
     bit_position = 0
-
-    # Process each bit in the number
     temp = n
+
     while temp > 0:
-        if bit_position % 2 == 1:  # Even-indexed bits (0-based)
+        if bit_position % 2 == 1:
             result |= 1 << bit_position
         bit_position += 1
         temp >>= 1
@@ -40,11 +31,10 @@ def even_bit_toggle_number(n):
     return n ^ result
 ```
 
-- Maintained exact same functionality as original implementation
-- Improved variable naming for clarity (res → result, count → bit_position)
-- Added docstring explaining function purpose and parameters
-- Preserved the same bit manipulation logic
-- Kept the same control flow structure
-- Maintained the same return value calculation
-- Improved code readability through consistent formatting
-- Preserved all test cases behavior exactly
+- Renamed variables for clarity (`res` → `result`, `count` → `bit_position`, `temp` remains as it's a common convention)
+- Maintained the exact same logic and operators (bitwise OR `|`, right shift `>>`, XOR `^`)
+- Preserved the function name and signature exactly
+- Kept the same control flow and loop structure
+- Did not modify any mathematical operations or conditions
+- Ensured all bit manipulation operations remain unchanged
+- Retained the same return statement structure

@@ -1,7 +1,6 @@
-def count_uppercase_letters(input_string):
-    """Count the number of uppercase letters in the input string."""
-    count = 0
+def upper_ctr(input_string):
+    uppercase_count = 0
     for char in input_string:
-        if 'A' <= char <= 'Z':
-            count += 1
-    return count
+        if char >= 'A' and char <= 'Z':
+            uppercase_count += 1
+    return uppercase_count

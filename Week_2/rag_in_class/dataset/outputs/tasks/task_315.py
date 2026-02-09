@@ -1,21 +1,26 @@
-def find_max_len_even(s):
-    max_length = 0
-    max_start = -1
+def find_Max_Len_Even(input_string):
+    string_length = len(input_string)
+    current_index = 0
     current_length = 0
-    current_start = 0
+    maximum_length = 0
+    start_index = -1
 
-    for i, char in enumerate(s):
-        if char == ' ':
-            if current_length % 2 == 0 and current_length > max_length:
-                max_length = current_length
-                max_start = current_start
+    while current_index < string_length:
+        if input_string[current_index] == ' ':
+            if current_length % 2 == 0:
+                if maximum_length < current_length:
+                    maximum_length = current_length
+                    start_index = current_index - current_length
             current_length = 0
-            current_start = i + 1
         else:
             current_length += 1
+        current_index += 1
 
-    if current_length % 2 == 0 and current_length > max_length:
-        max_length = current_length
-        max_start = current_start
+    if current_length % 2 == 0:
+        if maximum_length < current_length:
+            maximum_length = current_length
+            start_index = current_index - current_length
 
-    return s[max_start:max_start + max_length] if max_start != -1 else "-1"
+    if start_index == -1:
+        return "-1"
+    return input_string[start_index: start_index + maximum_length]

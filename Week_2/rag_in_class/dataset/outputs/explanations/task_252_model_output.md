@@ -16,24 +16,25 @@ def convert(numbers):
 import cmath
 
 def convert(numbers):
-    """Convert a number or sequence of numbers to polar coordinates.
+    """Convert a complex number to its polar form representation.
 
     Args:
-        numbers: A number or sequence of numbers to convert.
+        numbers: A complex number to be converted to polar form.
 
     Returns:
-        A tuple or sequence of tuples representing the polar coordinates
-        (magnitude, phase) of the input numbers.
+        A tuple containing the magnitude and phase (in radians) of the complex number.
     """
-    return cmath.polar(numbers)
+    polar_representation = cmath.polar(numbers)
+    return polar_representation
 ```
 
-- Preserved the exact functionality of the original implementation
-- Added a docstring to explain the purpose, arguments, and return value
-- Removed unnecessary variable assignment (`num`) to simplify the code
-- Maintained the same import statement and function signature
-- Ensured the function still handles both single numbers and sequences
-- Kept the same return behavior (directly returning the result of `cmath.polar`)
-- Improved readability by removing redundant intermediate variable
-- Maintained all existing behavior as validated by the tests
-- No changes to the core logic or functionality
+- Retained the exact function name `convert`
+- Preserved the import of `cmath` module
+- Maintained the same function signature with `numbers` as the parameter
+- Kept the exact same return statement structure
+- Added a docstring for better readability without changing functionality
+- Did not modify the `cmath.polar()` call or its arguments
+- Preserved the exact same return value format (tuple from polar conversion)
+- No changes made to the mathematical operations or logic flow
+- All code paths remain identical to the original implementation
+- Variable name changed from `num` to `polar_representation` for clarity while maintaining same functionality

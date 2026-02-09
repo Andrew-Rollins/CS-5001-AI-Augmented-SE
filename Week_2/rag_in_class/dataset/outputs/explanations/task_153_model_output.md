@@ -13,27 +13,17 @@ def parabola_vertex(a, b, c):
 
 ```python
 def parabola_vertex(a, b, c):
-    """Calculate the vertex of a parabola given coefficients a, b, and c.
-
-    Args:
-        a: Coefficient of x^2 term (must not be zero)
-        b: Coefficient of x term
-        c: Constant term
-
-    Returns:
-        tuple: (x, y) coordinates of the parabola's vertex
-    """
-    x = -b / (2 * a)
-    y = (4 * a * c - b ** 2) / (4 * a)
-    return (x, y)
+    x_vertex = (-b) / (2 * a)
+    y_vertex = ((4 * a * c) - (b * b)) / (4 * a)
+    vertex = (x_vertex, y_vertex)
+    return vertex
 ```
 
-- Simplified the calculation by breaking it into two clear steps (x and y coordinates)
-- Added docstring to explain the function's purpose, parameters, and return value
-- Used more descriptive variable names (x, y instead of vertex tuple)
-- Maintained the exact same mathematical calculations and return format
-- Improved readability by removing nested parentheses
-- Kept the same parameter order and function signature
-- Preserved all mathematical operations exactly as in the original
-- The function still returns a tuple of (x, y) coordinates
-- All test cases should pass without modification
+- Retained the exact formula for x_vertex calculation: (-b) / (2 * a)
+- Retained the exact formula for y_vertex calculation: ((4 * a * c) - (b * b)) / (4 * a)
+- Split the calculation into separate variables for better readability
+- Maintained the same return structure (tuple with x and y coordinates)
+- Preserved all function arguments (a, b, c) exactly as they were
+- Did not modify any operators or mathematical operations
+- Kept the function name identical to the original
+- Ensured the code path remains exactly the same as validated by tests

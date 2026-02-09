@@ -65,7 +65,8 @@ def main() -> None:
 
     if not paths.index_dir.exists():
         raise SystemExit("Missing dataset/outputs/rag_faiss_index. Run tools/build_faiss_rag.py first.")
-
+    print(f"Looking for index at: {paths.index_dir}")
+    print(f"Exists: {paths.index_dir.exists()}")
     embed_model = os.environ.get("OLLAMA_EMBED_MODEL", "nomic-embed-text")
     embeddings = OllamaEmbeddings(model=embed_model)
     vectordb = FAISS.load_local(str(paths.index_dir), embeddings, allow_dangerous_deserialization=True)
